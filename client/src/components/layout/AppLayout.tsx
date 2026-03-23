@@ -3,7 +3,7 @@ import { BottomNav } from "./BottomNav";
 import { Sidebar } from "./Sidebar";
 import { useAuth } from "@/hooks/use-auth";
 import { useLocation, Link } from "wouter";
-import aiChatLogo from "@assets/gaypl-logo-black-2048px_1766863308056.png";
+
 
 export function AppLayout({ children }: { children: ReactNode }) {
   const { isAuthenticated } = useAuth();
