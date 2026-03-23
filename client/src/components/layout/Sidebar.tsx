@@ -3,7 +3,6 @@ import { User, BookOpen, MessageCircle, Megaphone, Calendar, LogOut, Settings, S
 import { useAuth } from "@/hooks/use-auth";
 import { useQuery } from "@tanstack/react-query";
 import clsx from "clsx";
-import logoUrl from "@assets/gaypl-logo-black-2048px_1766853043718.png";
 
 const navItems = [
   { href: "/", icon: User, label: "Szukaj" },
@@ -24,11 +23,6 @@ export function Sidebar() {
   return (
     <aside className="hidden md:flex flex-col w-64 h-screen fixed left-0 top-0 bg-card border-r border-border p-6 z-40">
       <div className="flex items-center gap-3 mb-10 px-2">
-        <img 
-          src={logoUrl} 
-          alt="gay.pl logo" 
-          className="w-10 h-10 rounded-lg shadow-[0_0_15px_rgba(0,255,65,0.6)]"
-        />
         <h1 className="text-2xl font-bold tracking-tight text-white">
           gay<span className="text-primary">.pl</span>
         </h1>
@@ -58,7 +52,7 @@ export function Sidebar() {
             location === "/admin" 
               ? "bg-primary text-black font-semibold shadow-[0_0_15px_rgba(0,255,65,0.4)]"
               : "text-primary hover:bg-primary/10"
-          )} data-testid="link-admin">
+          )}>
             <Shield className="w-5 h-5" />
             <span>Panel Admin</span>
           </Link>
